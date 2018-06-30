@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{spidernode/node_modules}" />
-    <file url="PROJECT" libraries="{@types/es6-collections, @types/express, @types/node, spidernode/node_modules}" />
-    <includedPredefinedLibrary name="HTTP Response Handler" />
+    <file url="file://$PROJECT_DIR$" libraries="{spider-net/node_modules}" />
+    <file url="PROJECT" libraries="{@types/es6-collections, @types/node, spider-net/node_modules}" />
   </component>
 </project>
