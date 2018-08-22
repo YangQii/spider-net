@@ -10,8 +10,16 @@ app.get('/', function (req, res, next) {
   console.log('执行get');
   superG.get('http://www.ziroom.com/z/nl/z3.html?qwd=%E5%9B%9E%E9%BE%99%E8%A7%82')
     .end(function (err, sres) {
-      console.log('ser', sres);
-      res.send(sres);
+      const $ = cheerio.load(sres.text);
+      const items = [];
+      $('#houseList .t1').each(function (idx, element) {
+        const ele = $(element);
+        items.push({
+          title: ele.text(),
+          href: 'http://' + ele.attr('href').substring(2)
+        })
+      });
+      res.send(items);
     });
 });
 
